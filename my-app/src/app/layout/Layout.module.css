@@ -1,0 +1,24 @@
+.body {
+   display: flex;
+   justify-content: center;
+}
+
+.bodyCard {
+   max-width: 450px;
+   width: 100%;
+   /* height: 100vh; */
+}
+
+/* .header {
+   height: 80px;
+} */
+
+.main {
+   height: calc(100vh - 40px);
+   background-color: #F6F7FC;
+   overflow: scroll;
+}
+
+.footer {
+   height: 40px;
+}
