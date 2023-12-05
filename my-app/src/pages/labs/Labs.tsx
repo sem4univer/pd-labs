@@ -4,10 +4,12 @@ import classes from "./Labs.module.css";
 import { useSwipeable } from "react-swipeable";
 import classNames from "classnames";
 import { Flex } from "antd";
+import { Container } from "../../common/Container/Container";
+import { Link } from "react-router-dom";
 
 const labDataset = [
   {
-    component: <p></p>,
+    link: "/physics/1",
     title: (
       <>
         Лабораторная <br /> работа №1
@@ -16,7 +18,7 @@ const labDataset = [
     description: "des1",
   },
   {
-    component: <p></p>,
+    link: "/physics/2",
     title: (
       <>
         Лабораторная <br /> работа №2
@@ -25,7 +27,7 @@ const labDataset = [
     description: "des2",
   },
   {
-    component: <p></p>,
+    link: "/physics/2",
     title: (
       <>
         Лабораторная <br /> работа №3
@@ -55,14 +57,18 @@ export const Labs: FC = () => {
 
   return (
     <>
-      <div className={classes["subjectSwitcher"]}>
-        <div className={classes["summaryPoints"]}>
-          <div className={classes["summaryPoint"]}></div>
+      {/* Предмет */}
+      <Container>
+        <div className={classes["subjectSwitcher"]}>
+          <div className={classes["summaryPoints"]}>
+            <div className={classes["summaryPoint"]}></div>
+          </div>
+          <div className={classes["subject"]}>Физика</div>
+          <div className={classes["summaryDigitals"]}>1/1</div>
         </div>
-        <div className={classes["subject"]}>Физика</div>
-        <div className={classes["summaryDigitals"]}>1/1</div>
-      </div>
+      </Container>
 
+      {/* Слайдер */}
       <div {...handlers} className={classes["subjectLabs"]}>
         <div
           style={{ transform: `translateX(calc(80% * ${sliderIndex}))` }}
@@ -71,15 +77,25 @@ export const Labs: FC = () => {
           <div style={{ width: "10%", height: "1px", flex: "none" }}></div>
           {labDataset.map((lab, index) => {
             return (
-              <div key={index} className={classes["labContainer"]}>
+              <div className={classes["labContainer"]}>
+                {/* <div key={index}> */}
                 <div className={classes["labCard"]}>
-                  <div className={classes["labTitle"]}>{lab.title}</div>
+                  <Link
+                    style={{ display: "block", textDecoration: "none", width: '100%', height: '100%' }}
+                    to={`/labs${lab.link}`}
+                  >
+                    <div className={classes["labTitle"]}>{lab.title}</div>
+                  </Link>
                 </div>
+                {/* </div> */}
               </div>
             );
           })}
         </div>
+
         <br />
+
+        {/* Кружочки */}
         <Flex gap={5} justify="center">
           {labDataset.map((_, labIndex) => {
             const currLabIndex = sliderIndex * -1;
