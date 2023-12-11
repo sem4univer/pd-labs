@@ -37,7 +37,7 @@ export class Circuit implements FullStateGetter {
   changeNodeByNodeType(replacedNodeIndex: number, nodeType: string) {
     if (!this.rootNode) throw new Error("no root Node");
     const newNode = this.createNodeByType(nodeType);
-    // 3 хаха прихардкодил размер капец
+    // 3 хаха прихардкодил размер
     const preNodeForReplacement = this.getNodeByIndex(
       replacedNodeIndex - 1 >= 0 ? replacedNodeIndex - 1 : 3
     );
