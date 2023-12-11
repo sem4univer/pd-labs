@@ -1,0 +1,8 @@
+.container {
+  transition: .2s background-image;
+  background-image: url('../../images/electric/Lamp.png')
+}
+
+.containerActive {
+  background-image: url('../../images/electric/Lamp1.png')
+}

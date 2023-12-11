@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  padding: 80px 0px;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 100%;
+
+  color: #585C75;
+}
+
+.inputContainer {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 0 30px;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.button {
+  flex: 1;
+  display: grid;
+}
+
+.grayText {
+  margin-top: 10px;
+  width: 100%;
+  color: #AFAFAF;
+  text-align: center;
+}

@@ -11,7 +11,7 @@ export const Layout: FC = () => {
         <main className={classes["main"]}>
           <Outlet />
         </main>
-        <footer className={classes["footer"]}>footer</footer>
+        <footer className={classes["footer"]}>Московский политех 2023</footer>
       </div>
     </div>
   );

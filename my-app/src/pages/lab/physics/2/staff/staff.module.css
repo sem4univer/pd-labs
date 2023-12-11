@@ -1,0 +1,13 @@
+.staff {
+  height: var(--node-size, 70px);
+  width: var(--node-size, 70px);
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  cursor:grab;
+
+  color: #eee;
+}

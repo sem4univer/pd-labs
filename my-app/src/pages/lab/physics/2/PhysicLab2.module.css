@@ -1,0 +1,44 @@
+.wrapper {
+  padding: 0 30px;
+}
+
+.container {
+  width: 100%;
+
+  position: relative;
+}
+
+.background {
+  width: 100%;
+}
+
+.staff {
+  border: 2px solid #d5d5d5;
+  padding: 15px;
+  border-radius: 20px;
+
+  margin-bottom: 20px;
+
+  min-height: 104px;
+
+  display: flex;
+}
+
+.droppableNodeZone {
+  width: 70px;
+  height: 70px;
+
+  transition: .2s background;
+
+  position: absolute;
+}
+
+.droppableNodeZoneActive {
+  background: rgba(0, 255, 0, 0.2);
+  box-shadow: 0px 0px 20px rgba(0, 255, 0, 0.2);
+}
+
+.staffDraggableContainer {
+  width: 70px;
+  height: 70px;
+}

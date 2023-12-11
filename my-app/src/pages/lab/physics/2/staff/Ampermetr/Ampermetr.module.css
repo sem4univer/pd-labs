@@ -1,0 +1,36 @@
+.container {
+  background-image: url('../../images/electric/Amper.png');
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text {
+  font-size: 20px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 7px;
+  height: 38px;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 18px;
+    line-height: 18px;
+
+    padding-bottom: 7px;
+  }
+
+  .text {
+    font-size: 14px;
+    line-height: 14px;
+    height: 25px;
+  }
+}
